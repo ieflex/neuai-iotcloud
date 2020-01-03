@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- 模型版本。maven2.0必须是这样写，现在是maven2唯一支持的版本 -->
+	<modelVersion>4.0.0</modelVersion>
+	<!-- 公司或者组织的唯一标志，并且配置时生成的路径也是由此生成，maven会将该项目打成的jar包放本地路径：/com/neuai -->
+	<groupId>com.neuai</groupId>
+	<!-- 本项目的唯一ID，一个groupId下面可能多个项目，就是靠artifactId来区分的 -->
+	<artifactId>niot-live-data</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<!-- 打包的机制，如pom,jar, maven-plugin, ejb, war, ear, rar, par，默认为jar -->
+	<packaging>jar</packaging>
+	<!--项目名称 -->
+	<name>niot-live-data</name>
+	<!--项目主页的URL, Maven产生的文档用 -->
+	<url>http://www.neuai.net/</url>
+	<properties>
+		<!--使用JDK的版本 -->
+		<java.version>1.8</java.version>
+		<!--项目编码 -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<!-- 定义通用的springboot版本号 -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.1.RELEASE</version>
+	</parent>
+	<!-- 定义本项目的依赖关系 -->
+	<dependencies>
+		<!--Spring Boot核心，包括自动配置支持，日志和YAML -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<!--web应用基本环境配置 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- Spring测试模块 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>
