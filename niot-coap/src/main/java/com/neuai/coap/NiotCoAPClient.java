@@ -15,7 +15,7 @@ public class NiotCoAPClient {
 			throws InterruptedException, URISyntaxException, ConnectorException, IOException {
 
 		URI uri = null;
-		uri = new URI("localhost:5683/time"); // 创建一个资源请求hello资源，注意默认端口为5683
+		uri = new URI("localhost:5683/time"); // 创建一个资源请求time资源，注意默认端口为5683
 		CoapClient client = new CoapClient(uri);
 		CoapResponse response = client.get();
 		if (response != null) {
