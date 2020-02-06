@@ -1,0 +1,23 @@
+#配置服务启动后占用的端口
+server:
+  port: 8080
+#配置spring数据源
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://127.0.0.1:5432/niot
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 123qwe
+#配置启用hibernate
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+#配置启用mybatis
+mybatis:
+  type-aliases-package: com.neuai.model
+  mapper-locations: classpath:mapper/*.xml

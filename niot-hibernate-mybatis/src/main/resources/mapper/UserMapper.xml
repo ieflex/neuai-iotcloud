@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuai.orm.mybatis.UserMapper">
+
+    <resultMap id="UserResultMap" type="com.neuai.model.User">
+        <result column="user_id" javaType="String" property="userId"/>
+        <result column="user_name" javaType="String" property="userName"/>
+        <result column="phone" javaType="String" property="phone"/>
+        <result column="password" javaType="String" property="password"/>
+        <result column="email" javaType="String" property="email"/>
+        <result column="name" javaType="String" property="name"/>
+        <result column="signupTime" javaType="java.util.Date" property="signupTime"/>
+        <result column="create_time" javaType="java.util.Date" property="createTime"/>
+        <result column="status" javaType="int" property="status"/>
+        <result column="detail" javaType="String" property="detail"/>
+    </resultMap>
+
+
+    <select id="selectByUserId" resultMap="UserResultMap">
+        select u.* from users as u where u.user_id = #{userId}
+    </select>
+
+    <select id="selectAllUser" resultMap="UserResultMap">
+        select u.* from users as u
+    </select>
+
+</mapper>
