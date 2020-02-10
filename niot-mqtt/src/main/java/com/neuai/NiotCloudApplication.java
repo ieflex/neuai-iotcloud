@@ -6,12 +6,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages={"com.neuai.controller"})
+@ComponentScan(basePackages={"com.neuai"})
 public class NiotCloudApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(NiotCloudApplication.class, args);
-		System.out.println("Hello World!");
 	}
 
 }
