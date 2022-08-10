@@ -20,7 +20,7 @@
 		<!--项目编码 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!--CoAP californium 版本 -->
-		<californium.version>2.0.0</californium.version>
+		<californium.version>2.7.3</californium.version>
 	</properties>
 	<!-- 定义通用的springboot版本号 -->
 	<parent>
